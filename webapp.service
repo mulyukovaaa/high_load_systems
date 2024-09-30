@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask Web Application
+After=network.target
+
+[Service]
+User=amina        
+Group=users   
+WorkingDirectory=/opt/webapp
+Environment="PATH=/opt/webapp/appvenv/bin"
+ExecStart=/opt/webapp/appvenv/bin/python /opt/webapp/app.py
+
+[Install]
+WantedBy=multi-user.target
