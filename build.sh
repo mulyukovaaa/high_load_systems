@@ -20,6 +20,8 @@ source appvenv/bin/activate
 pip install flask
 pip install requests
 
+systemctl daemon-reload
+
 systemctl start webapp.service
 systemctl enable webapp.service
 systemctl start webapp_status.timer
