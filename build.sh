@@ -1,5 +1,9 @@
 #!/bin/bash
 
+export USER=$(whoami)
+export GROUP=$(id -gn $USER)
+exec "$@"
+
 apt update
 apt install python3 python3-venv python3-pip
 
