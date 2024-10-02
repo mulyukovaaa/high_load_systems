@@ -1,0 +1,9 @@
+[Unit]
+Description=Check Web Application Status
+
+[Service]
+Type=oneshot
+ExecStart=/opt/webapp/appvenv/bin/python /opt/webapp/check_status.py
+
+[Install]
+WantedBy=multi-user.target

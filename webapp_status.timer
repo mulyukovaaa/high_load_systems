@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Check Web Application Status every 5 minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=5min
+Unit=webapp_status.service
+
+[Install]
+WantedBy=timers.target
